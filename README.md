@@ -91,7 +91,6 @@ java项目，Maven插件
 
 ## logrotate参数说明
 
->参考链接：https://blog.csdn.net/liuxiao723846/article/details/100120058
 
 ```
 # cat /etc/logrotate.d/jenkins      
@@ -111,4 +110,36 @@ java项目，Maven插件
 ## jenkins用户权限管理
 ```
 已将jenkins用户权限管理修改为Role-based Authorization Strategy
+```
+
+# 使用说明
+
+目前只在CentOS 7上进行安装及卸载测试。
+
+## 下载地址
+> 
+```
+链接: https://pan.baidu.com/s/18mUrGewnh-Av7BONNVSRYQ  密码: 8tc0
+```
+
+## 代理地址修改
+```
+# vim /opt/data/jenkins/jenkins.model.JenkinsLocationConfiguration.xml 
+
+修改此行中的IP地址：
+    <jenkinsUrl>http://xxxx:9999/</jenkinsUrl>
+
+此处IP地址一定为具体的IP地址，不能填写0.0.0.0
+```
+
+## 服务启动
+```
+/etc/init.d/jenkins start
+```
+
+## 服务访问
+```
+http://xxx:9999
+用户名：yunweishuo
+密码：yunweishuo
 ```
